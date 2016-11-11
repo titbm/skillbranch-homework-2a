@@ -2,9 +2,13 @@
 
 var express = require('express');
 
+var cors = require('cors');
+
 var server = express();
 
 var PORT = process.env.PORT || 3000;
+
+server.use(cors());
 
 server.get('/', function (request, response) {
 
@@ -20,7 +24,7 @@ server.get('/', function (request, response) {
 
   var answer = a + b;
 
-  response.send('\u0412\u044B\u0432\u043E\u0434: ' + answer);
+  response.send('' + answer);
 });
 
 server.listen(PORT, function () {

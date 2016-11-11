@@ -22,7 +22,7 @@ server.get('/', function (request, response) {
 
   const answer = a + b;
 
-  response.send(`Вывод: ${answer}`);
+  response.send(`${answer}`);
 });
 
 server.listen(PORT, function () {
